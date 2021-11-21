@@ -16,4 +16,8 @@ public class Time {
             throw new MinimumTimeException();
         }
     }
+
+    public Integer info() {
+        return time;
+    }
 }
