@@ -251,3 +251,60 @@ public void getDijkstraShortestPath() {
 ## 📝 License
 
 This project is [MIT](https://github.com/woowacourse/java-subway-path-precourse/blob/master/LICENSE.md) licensed.
+
+## 🚀 기능 구현
+### [ toDo ]
+```
+## 초기 설정
+Line - 지하철 호선 정보
+   - 2호선, 3호선이 존재하는 경우
+   - LineRepository 에는 Line 2와 Line 3의 정보가 저장되어 있다.
+   - Line은 양의 정수이어야 한다.
+
+Station - 지하철 역 정보
+   - StationRepository 에는 각 호선에 존재하는 역의 정보들이 저장되어 있다.
+   - 2호선일 경우 : StationRepository 에는 교대역, 강남역, 역삼역이 저장되어 있다.
+
+Line2StationRepository - 지하철 호선과 지하철 역 정보를 연결해 놓은 저장소
+   - map으로 구성되어 있다.
+   - key는 Line을 의미한다.
+   - values는 StationRepository를 의미한다.
+
+Station2StationTimeRepository
+   - 지하철 역 간 걸리는 시간 정보가 저장되어 있다.
+   - map으로 구성되어 있다.
+   - key는 호선 + "_" + 출발역 + "_" + 도착역 으로 구성되어 있다.
+   - value는 출발역에서 도착역까지 걸리는 시간 정보가 저장되어 있다.
+   - 지하철 역 간 걸리는 시간 정보가 저장되어 있다.
+   
+Station2StationDistanceRepository
+   - 지하철 역 간 거리 정보가 저장되어 있다.
+   - map으로 구성되어 있다.
+   - key는 호선 + "_" + 출발역 + "_" + 도착역 으로 구성되어 있다.
+   - value는 출발역에서 도착역까지 걸리는 시간 정보가 저장되어 있다.
+   - 지하철 역 간 걸리는 시간 정보가 저장되어 있다.
+
+## Application
+   - Main class
+   - Scanner 객체 생성   
+   - Controller 실행
+
+## SubwayController
+   - model과 view를 연결해주는 controller 역할
+   - 초기 설정 클래스를 실행
+   - 사용자로 부터 입력값을 받아들이는 InputView 실행
+   - 최단 거리 및 최소 시간을 계산하는 MinimumDistanceTimeCalculator 클래스 실행
+   - 결과를 출력해주는 ResultView 실행
+
+## MinimumDistanceTimeCalculator
+   - 최소 시간 및 최단 거리 계산 (다익스트라 이용)
+   - 인자로 출발역, 도착역, 계산 방법 (최소 시간, 최단 거리) 3가지를 받음
+   - [ 예외 처리 ]
+       - 출발역과 도착역이 같다면 예외처리 : SameStationException 실행
+       - 출발역과 도착역이 연결되어 있지 않다면 예외처리 : CanNotFoundStationConnectInfoException 실행
+          - 다익스트라로 최단거리 및 최소시간을 계산하는 과정에서 IllegalArgumentException의 발생 여부로 확인 예정 
+
+
+
+
+
