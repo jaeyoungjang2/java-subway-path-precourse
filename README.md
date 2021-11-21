@@ -309,3 +309,7 @@ This project is [MIT](https://github.com/woowacourse/java-subway-path-precourse/
        - 출발역과 도착역이 연결되어 있지 않다면 예외처리 : CanNotFoundStationConnectInfoException 실행
           - 다익스트라로 최단거리 및 최소시간을 계산하는 과정에서 IllegalArgumentException의 발생 여부로 확인 예정 
 
+## Time
+   - 지하철 역 간에 이동 시 걸리는 시간
+   - [ 예외 처리 ]
+       - 이동 시 걸리는 시간이 1초 보다 작을 경우 예외 처리 : MinimumTimeException 실행
