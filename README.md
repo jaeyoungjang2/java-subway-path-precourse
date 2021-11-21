@@ -313,3 +313,8 @@ This project is [MIT](https://github.com/woowacourse/java-subway-path-precourse/
    - 지하철 역 간에 이동 시 걸리는 시간
    - [ 예외 처리 ]
        - 이동 시 걸리는 시간이 1초 보다 작을 경우 예외 처리 : MinimumTimeException 실행
+
+## Distance
+   - 지하철 역 간에 이동 거리
+   - [ 예외 처리 ]
+       - 이동 시 걸리는 시간이 1km 보다 작을 경우 예외 처리 : MinimumDistanceException 실행
